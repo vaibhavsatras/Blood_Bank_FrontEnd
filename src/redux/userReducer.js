@@ -42,8 +42,6 @@ export const userSignin = createAsyncThunk('User SignIn',async(body)=>{
     const newUser = commonFunction('https://blood-backend-wg3q.vercel.app/user/signIn',body)
     
     const data = await newUser
-
-    console.log(data)
     
     if(data.result && data.user.role === 'Organization')
     {
